@@ -17,17 +17,25 @@ TargetPosition：构成树木圆锥形状的目标坐标。 在 useFrame 中根�
 
 ## 🛠️ Installation
 
+### (Windows)
+
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
-   cd grand-luxury-interactive-christmas-tree
+   git clone https://github.com/SteveAshore/christmas-tree.git
+   cd christmas-tree
    ```
 
-2. **Install dependencies:**
+2. **Install dependencies:**\
+首先需要确认安装了`node.js`，具体的安装教程在文末给出。检查`node`和`npm`安装好的命令如下，如果输出版本号，则安装成功：
+   ```bash
+   node --version
+   npm --version
+   ```
+   然后进行安装，命令如下：
    ```bash
    npm install
    ```
-
+   如果遇到权限不足的情况，需要先以管理员身份打开cmd，切换到该项目的根目录，重新执行安装。
 3. **Run the development server:**
    ```bash
    npm run dev
@@ -38,6 +46,88 @@ TargetPosition：构成树木圆锥形状的目标坐标。 在 useFrame 中根�
    - Allow camera access for gesture control
    - Click "上传照片" to upload your photos
 
+### (MacOS)
+#### Part I : Git零基础安装
+旨在帮助 macOS 用户从零开始安装和配置 Git，并成功克隆（git clone）该远程仓库到本地。
+
+1. 环境准备：安装 Git
+   
+   在 macOS 上，使用 Homebrew 安装 Git。
+
+   a. 安装 Homebrew（如果尚未安装）： 打开 终端 (Terminal) 并运行以下命令：
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+   b. 使用 Homebrew 安装 Git： Homebrew 安装完成后，在终端中运行：
+   ```bash
+   brew install git
+   ```
+   c. 验证安装： 安装完成后，运行以下命令确认 Git 是否可用：
+   ```bash
+   git --version
+   ```
+   预期输出示例: `git version 2.44.0` 或更高版本。
+2. 首次配置：设置身份信息
+   
+   在进行任何提交（Commit）操作之前，您需要告诉 Git 您的身份，这些信息将永久记录在您的提交历史中。
+
+   使用 `--global` 标志将配置应用于您的所有 Git 仓库。
+
+   a. 设置用户名
+   ```bash
+   git config --global user.name "Your Name"
+   ```
+   例如想设置名称为 `Mia`，指令为 `git config --global user.name "Mia"`。
+
+   b. 设置电子邮箱
+   ```bash
+   git config --global user.email "youremail@example.com"
+   ```
+   同理，将双引号内的内容修改为想要设置的邮箱即可。
+
+3. 核心操作：执行 git clone
+
+   `git clone` 是将远程仓库（如 GitHub 上的项目）完整复制到本地计算机的命令。
+
+   a. 选择克隆位置
+
+   使用 `cd` 命令导航到您希望存放项目的本地文件夹。例如切换到“文档”文件夹：
+   ```bash
+   cd ~/Documents/
+   ```
+   
+   b. 克隆本仓库
+   ```bash
+   git clone https://github.com/SteveAshore/christmas-tree.git
+   ```
+
+   c. 进入仓库目录
+   ```bash
+   cd christmas-tree
+   ```
+#### Part II : Node.js 安装
+1. 使用 Homebrew 安装 Node.js
+   ```bash
+   brew install node
+   ```
+2. 验证安装
+   ```bash
+   node --version
+   npm --version
+   ```
+
+#### Part III: 使用`nmp`安装
+   ```bash
+   npm install
+   ```
+#### Part IV：运行服务器
+   ```bash
+   npm run dev
+   ```
+#### Part V：浏览器操作
+   - 打开Safari浏览器，在搜索栏输入 `http://localhost:3010`
+   - 允许相机权限以便手势控制
+   - 点击 "上传照片" 来上传照片
 
 ## 🎯 Usage
 
@@ -60,3 +150,6 @@ When no hand is detected, you can:
 ## 🎅 Happy Holidays!
 
 May your code be merry and bright! 🎄✨
+
+## Appendix
+`node.js`的安装教程：

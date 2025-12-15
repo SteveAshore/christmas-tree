@@ -8,6 +8,8 @@ import { Foliage } from './Foliage';
 import { Ornaments } from './Ornaments';
 import { Polaroids } from './Polaroids';
 import { TreeStar } from './TreeStar';
+import Snowflakes from './Snowflakes';
+import Garland from './Garland';
 import { TreeMode } from '../types';
 
 interface ExperienceProps {
@@ -98,6 +100,8 @@ export const Experience: React.FC<ExperienceProps> = ({ mode, handPosition, uplo
       <pointLight position={[-10, 5, -10]} intensity={1} color="#D4AF37" />
 
       <group position={[0, -5, 0]}>
+        <Snowflakes mode={mode} count={2000} />
+        <Garland mode={mode} turns={8} height={11} radius={8} />
         <Foliage mode={mode} count={12000} />
         <Ornaments mode={mode} count={600} />
         <Polaroids mode={mode} uploadedPhotos={uploadedPhotos} />
